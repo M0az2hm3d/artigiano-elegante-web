@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Layers, Gem, Grid3X3, TreePine, PaintBucket, Lamp } from "lucide-react";
+import { Layers, Gem, Grid3X3, PaintBucket, Lamp } from "lucide-react";
 
 const services = [
   { icon: Grid3X3, title: "Piastrelle", desc: "Posa di piastrelle di ogni formato e stile, con finiture precise e durature per interni ed esterni." },
