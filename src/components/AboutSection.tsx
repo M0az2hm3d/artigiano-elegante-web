@@ -26,8 +26,7 @@ const AboutSection = () => {
             </h2>
             <div className="gold-line w-16 mb-8" />
             <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-6">
-              Siamo artigiani con oltre <strong className="text-foreground">14 anni di esperienza</strong> nel settore edilizio.
-              Abbiamo completato più di <strong className="text-foreground">160 cantieri</strong> con professionalità e precisione,
+              Siamo artigiani con oltre <strong className="text-foreground">20 anni di esperienza</strong> nel settore edilizio,
               guadagnando la fiducia di centinaia di clienti in tutta la Lombardia.
             </p>
             <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-8">
