@@ -20,7 +20,7 @@ const HeroSection = () => {
           <p className="text-primary font-body text-sm md:text-base tracking-[0.3em] uppercase mb-6">
             Eccellenza Artigianale Italiana
           </p>
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-foreground">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-foreground">
             Lavori Edili di Alta Qualità
             <br />
             <span className="gold-gradient-text">Precisione e Affidabilità</span>
