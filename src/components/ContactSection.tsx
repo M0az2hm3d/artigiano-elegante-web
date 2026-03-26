@@ -36,7 +36,7 @@ const ContactSection = () => {
             {[
               { icon: Phone, label: "+39 327 398 7877", href: "tel:+393273987877" },
               { icon: Mail, label: "elabd.edile.srl@gmail.com", href: "mailto:elabd.edile.srl@gmail.com" },
-              { icon: MapPin, label: "Corso Giuseppe Mazzini 23, Mortara (PV)", href: "https://maps.google.com/?q=Corso+Giuseppe+Mazzini+23+Mortara" },
+              { icon: MapPin, label: "Corso Giuseppe Mazzini 23, Mortara (PV)", href: "https://www.google.com/maps/search/?api=1&query=Corso+Giuseppe+Mazzini+23%2C+Mortara+PV+Italia" },
               { icon: Clock, label: "Lun–Ven: 8:00–18:00 | Sab: 8:00–13:00" },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4">
