@@ -55,20 +55,13 @@ const ContactSection = () => {
 
             <p className="font-body text-sm text-muted-foreground mt-4">P.IVA: 02971400185</p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <a
-                href="mailto:elabd.edile.srl@gmail.com?subject=Richiesta%20preventivo"
-                className="flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-sm font-semibold tracking-wide hover:brightness-110 transition-all duration-300"
-              >
-                <Mail size={20} />
-                Invia Email
-              </a>
+            {/* CTA Button */}
+            <div className="pt-6">
               <a
                 href="https://wa.me/393273987877?text=Salve%2C%20vorrei%20richiedere%20un%20preventivo."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-sm font-semibold tracking-wide hover:brightness-110 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-sm font-semibold tracking-wide hover:brightness-110 transition-all duration-300"
               >
                 <MessageCircle size={20} />
                 WhatsApp
