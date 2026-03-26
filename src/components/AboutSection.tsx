@@ -53,9 +53,7 @@ const AboutSection = () => {
             className="grid grid-cols-2 gap-6"
           >
             {[
-              { num: "14+", desc: "Anni nel settore" },
-              { num: "160+", desc: "Progetti realizzati" },
-              { num: "100%", desc: "Clienti soddisfatti" },
+              { num: "+20", desc: "Anni di esperienza" },
               { num: "∞", desc: "Passione artigianale" },
             ].map((item) => (
               <div key={item.desc} className="glass-card p-8 text-center hover:border-primary/40 transition-colors duration-500">

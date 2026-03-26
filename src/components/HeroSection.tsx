@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Building2, Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
