@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 import { Layers, Gem, Grid3X3, TreePine, PaintBucket, Lamp } from "lucide-react";
 
 const services = [
-  { icon: Layers, title: "Lavori in Pietra", desc: "Rivestimenti e lavorazioni in pietra naturale per interni ed esterni di prestigio." },
-  { icon: Gem, title: "Installazione Marmo", desc: "Posa e lucidatura di marmo pregiato: pavimenti, scale, piani cucina e bagni." },
-  { icon: Grid3X3, title: "Posa Piastrelle", desc: "Piastrellature di ogni formato e stile, con finiture precise e durature." },
-  { icon: TreePine, title: "Posa Parquet", desc: "Installazione di parquet massello e prefinito con tecnica a spina, fascia e listoni." },
-  { icon: PaintBucket, title: "Cartongesso e Decorazioni", desc: "Pareti divisorie, nicchie, velette e lavori decorativi su misura." },
-  { icon: Lamp, title: "Controsoffitti", desc: "Controsoffitti moderni con illuminazione LED integrata e design personalizzato." },
+  { icon: Grid3X3, title: "Piastrelle", desc: "Posa di piastrelle di ogni formato e stile, con finiture precise e durature per interni ed esterni." },
+  { icon: Gem, title: "Marmo", desc: "Posa e lucidatura di marmo pregiato: pavimenti, scale, piani cucina e bagni di lusso." },
+  { icon: PaintBucket, title: "Cartongesso", desc: "Pareti divisorie, nicchie, velette, controsoffitti e lavori decorativi su misura." },
+  { icon: Layers, title: "Rifacimento Facciate", desc: "Restauro e rifacimento completo di facciate esterne con materiali di alta qualità." },
+  { icon: Lamp, title: "Ristrutturazione", desc: "Ristrutturazioni complete di appartamenti, uffici e locali commerciali chiavi in mano." },
 ];
 
 const ServicesSection = () => {
