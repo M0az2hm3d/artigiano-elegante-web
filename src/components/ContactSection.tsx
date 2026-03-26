@@ -36,7 +36,7 @@ const ContactSection = () => {
             {[
               { icon: Phone, label: "+39 327 398 7877", href: "tel:+393273987877" },
               { icon: Mail, label: "elabd.edile.srl@gmail.com", href: "mailto:elabd.edile.srl@gmail.com" },
-              { icon: MapPin, label: "Corso Giuseppe Mazzini 23, Mortara (PV)", href: "https://maps.google.com/?q=Corso+Giuseppe+Mazzini+23+Mortara" },
+              { icon: MapPin, label: "Corso Giuseppe Mazzini 23, Mortara (PV)", href: "https://www.google.com/maps/search/?api=1&query=Corso+Giuseppe+Mazzini+23%2C+Mortara+PV+Italia" },
               { icon: Clock, label: "Lun–Ven: 8:00–18:00 | Sab: 8:00–13:00" },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4">
@@ -79,7 +79,7 @@ const ContactSection = () => {
           >
             <iframe
               title="Sede ELABD EDILE SRL"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.5!2d8.7388!3d45.2536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDE1JzEzLjAiTiA4wrA0NCcyMC4xIkU!5e0!3m2!1sit!2sit!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.5!2d8.738!3d45.253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c5c04a4b0f67%3A0x1!2sCso.+Giuseppe+Mazzini%2C+23%2C+27036+Mortara+PV!5e0!3m2!1sit!2sit!4v1700000000000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
