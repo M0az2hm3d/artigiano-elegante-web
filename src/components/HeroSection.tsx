@@ -26,7 +26,7 @@ const HeroSection = () => {
             <span className="gold-gradient-text">Precisione e Affidabilità</span>
           </h1>
           <p className="font-body text-foreground/70 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Specialisti in piastrelle, parquet, marmo e cartongesso.
+            Specialisti in piastrelle, marmo, cartongesso e ristrutturazioni.
             <br className="hidden md:block" />
             Trasformiamo i vostri spazi con maestria artigianale.
           </p>

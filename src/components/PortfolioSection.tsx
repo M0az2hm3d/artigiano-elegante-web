@@ -8,11 +8,11 @@ import p6 from "@/assets/portfolio-6.jpg";
 
 const projects = [
   { img: p1, title: "Bagno in Gres Porcellanato", cat: "Piastrelle" },
-  { img: p2, title: "Parquet Spina Italiana", cat: "Parquet" },
+  { img: p2, title: "Rifacimento Facciata Esterna", cat: "Facciate" },
   { img: p3, title: "Controsoffitto LED", cat: "Cartongesso" },
   { img: p4, title: "Piano Cucina in Marmo", cat: "Marmo" },
-  { img: p5, title: "Rivestimento in Pietra", cat: "Pietra" },
-  { img: p6, title: "Soffitto Design Moderno", cat: "Controsoffitti" },
+  { img: p5, title: "Ristrutturazione Completa", cat: "Ristrutturazione" },
+  { img: p6, title: "Parete Decorativa", cat: "Cartongesso" },
 ];
 
 const PortfolioSection = () => {
