@@ -26,8 +26,7 @@ const AboutSection = () => {
             </h2>
             <div className="gold-line w-16 mb-8" />
             <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-6">
-              Siamo artigiani con oltre <strong className="text-foreground">14 anni di esperienza</strong> nel settore edilizio.
-              Abbiamo completato più di <strong className="text-foreground">160 cantieri</strong> con professionalità e precisione,
+              Siamo artigiani con oltre <strong className="text-foreground">20 anni di esperienza</strong> nel settore edilizio,
               guadagnando la fiducia di centinaia di clienti in tutta la Lombardia.
             </p>
             <p className="font-body text-foreground/70 text-base md:text-lg leading-relaxed mb-8">
@@ -54,9 +53,7 @@ const AboutSection = () => {
             className="grid grid-cols-2 gap-6"
           >
             {[
-              { num: "14+", desc: "Anni nel settore" },
-              { num: "160+", desc: "Progetti realizzati" },
-              { num: "100%", desc: "Clienti soddisfatti" },
+              { num: "+20", desc: "Anni di esperienza" },
               { num: "∞", desc: "Passione artigianale" },
             ].map((item) => (
               <div key={item.desc} className="glass-card p-8 text-center hover:border-primary/40 transition-colors duration-500">

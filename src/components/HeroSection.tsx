@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Building2, Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -53,19 +53,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-3 gap-6 max-w-xl mx-auto"
+          className="flex justify-center"
         >
-          {[
-            { icon: Calendar, value: "14+", label: "Anni di Esperienza" },
-            { icon: Building2, value: "160+", label: "Cantieri Completati" },
-            { icon: Award, value: "100%", label: "Clienti Soddisfatti" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <stat.icon className="mx-auto mb-2 text-primary" size={22} />
-              <p className="font-display text-2xl md:text-3xl font-bold text-foreground">{stat.value}</p>
-              <p className="font-body text-xs md:text-sm text-muted-foreground">{stat.label}</p>
-            </div>
-          ))}
+          <div className="text-center glass-card px-10 py-6">
+            <Calendar className="mx-auto mb-2 text-primary" size={26} />
+            <p className="font-display text-3xl md:text-4xl font-bold gold-gradient-text">+20</p>
+            <p className="font-body text-sm text-muted-foreground">Anni di Esperienza</p>
+          </div>
         </motion.div>
       </div>
     </section>
