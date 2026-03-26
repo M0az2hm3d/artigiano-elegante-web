@@ -2,18 +2,8 @@ import { motion } from "framer-motion";
 import p1 from "@/assets/portfolio-1.jpg";
 import p2 from "@/assets/portfolio-2.jpg";
 import p3 from "@/assets/portfolio-3.jpg";
-import p4 from "@/assets/portfolio-4.jpg";
-import p5 from "@/assets/portfolio-5.jpg";
-import p6 from "@/assets/portfolio-6.jpg";
 
-const projects = [
-  { img: p1, title: "Bagno in Gres Porcellanato", cat: "Piastrelle" },
-  { img: p2, title: "Rifacimento Facciata Esterna", cat: "Facciate" },
-  { img: p3, title: "Controsoffitto LED", cat: "Cartongesso" },
-  { img: p4, title: "Piano Cucina in Marmo", cat: "Marmo" },
-  { img: p5, title: "Ristrutturazione Completa", cat: "Ristrutturazione" },
-  { img: p6, title: "Parete Decorativa", cat: "Cartongesso" },
-];
+const projects = [p1, p2, p3];
 
 const PortfolioSection = () => {
   return (
@@ -37,29 +27,23 @@ const PortfolioSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((p, i) => (
+          {projects.map((img, i) => (
             <motion.div
-              key={p.title}
+              key={i}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer"
+              className="overflow-hidden rounded-lg aspect-square"
             >
               <img
-                src={p.img}
-                alt={p.title}
+                src={img}
+                alt={`Progetto ${i + 1}`}
                 loading="lazy"
                 width={800}
                 height={800}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/70 transition-all duration-500 flex items-end p-6">
-                <div className="translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <span className="text-primary font-body text-xs tracking-[0.2em] uppercase">{p.cat}</span>
-                  <h3 className="font-display text-xl font-semibold text-foreground mt-1">{p.title}</h3>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
