@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -16,8 +15,16 @@ const Navbar = () => {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const toggleMenu = useCallback(() => {
+    setMobileOpen((prev) => !prev);
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setMobileOpen(false);
   }, []);
 
   return (
@@ -53,45 +60,51 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden text-foreground p-2 -mr-2 touch-manipulation"
+          onClick={toggleMenu}
+          onTouchEnd={(e) => {
+            e.preventDefault();
+            toggleMenu();
+          }}
           aria-label="Menu"
+          type="button"
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/98 backdrop-blur-lg border-t border-border"
-          >
-            <div className="flex flex-col items-center gap-6 py-8">
-              {navLinks.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-sm font-body font-medium tracking-widest uppercase text-foreground/80 hover:text-primary transition-colors"
-                >
-                  {l.label}
-                </a>
-              ))}
+      {/* Mobile menu - no animation for max Android compatibility */}
+      {mobileOpen && (
+        <div
+          className="md:hidden border-t border-border overflow-hidden"
+          style={{ backgroundColor: "hsl(var(--background) / 0.98)" }}
+        >
+          <div className="flex flex-col items-center gap-6 py-8">
+            {navLinks.map((l) => (
               <a
-                href="tel:+393273987877"
-                className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-semibold"
+                key={l.href}
+                href={l.href}
+                onClick={closeMenu}
+                onTouchEnd={(e) => {
+                  e.preventDefault();
+                  closeMenu();
+                  window.location.href = l.href;
+                }}
+                className="text-sm font-body font-medium tracking-widest uppercase text-foreground/80 active:text-primary transition-colors"
               >
-                <Phone size={14} />
-                Chiama Ora
+                {l.label}
               </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            ))}
+            <a
+              href="tel:+393273987877"
+              className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-semibold"
+            >
+              <Phone size={14} />
+              Chiama Ora
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
